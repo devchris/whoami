@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  devchris-net:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devchris-net
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    volumes:
+      # Mount posts directory for easy blog content management
+      - ./posts:/app/posts:ro
+    networks:
+      - web
+    labels:
+      # Coolify labels for reverse proxy
+      - "coolify.managed=true"
+      - "coolify.name=devchris-net"
+      - "coolify.domain=devchris.net"
+      - "traefik.enable=true"
+      - "traefik.http.routers.devchris-net.rule=Host(`devchris.net`) || Host(`www.devchris.net`)"
+      - "traefik.http.routers.devchris-net.tls=true"
+      - "traefik.http.routers.devchris-net.tls.certresolver=letsencrypt"
+      - "traefik.http.services.devchris-net.loadbalancer.server.port=3000"
+      # Redirect www to non-www
+      - "traefik.http.routers.devchris-net-www.rule=Host(`www.devchris.net`)"
+      - "traefik.http.routers.devchris-net-www.middlewares=redirect-to-non-www"
+      - "traefik.http.middlewares.redirect-to-non-www.redirectregex.regex=^https://www\\.(.+)"
+      - "traefik.http.middlewares.redirect-to-non-www.redirectregex.replacement=https://$${1}"
+      - "traefik.http.middlewares.redirect-to-non-www.redirectregex.permanent=true"
+
+networks:
+  web:
+    external: true
