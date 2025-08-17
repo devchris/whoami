@@ -4,49 +4,49 @@ import { ArrowRight, Shield, Code, Brain, Terminal, ExternalLink } from 'lucide-
 export default function Home() {
   const featuredProjects = [
     {
-      title: "Threat Detection Engine",
-      description: "Advanced machine learning-based threat detection system for enterprise security.",
-      tech: ["Python", "TensorFlow", "AWS", "Docker"],
+      title: "planubo Platform",
+      description: "Complete planning and project management platform built solo - frontend, backend, infrastructure, and DevOps.",
+      tech: ["React", "Next.js", "Node.js", "AWS", "TypeScript"],
       status: "Production",
-      link: "/projects/threat-detection"
+      link: "/projects/planubo"
     },
     {
-      title: "AI Security Analyzer",
-      description: "Automated vulnerability scanner powered by large language models.",
-      tech: ["TypeScript", "OpenAI API", "React", "Node.js"],
+      title: "AI Agent Framework",
+      description: "Experimental multi-agent system leveraging LangChain, RAG, and intelligent knowledge bases.",
+      tech: ["Python", "LangChain", "RAG", "OpenAI", "Vector DBs"],
       status: "Beta",
-      link: "/projects/ai-security"
+      link: "/projects/ai-agents"
     },
     {
-      title: "Incident Response Toolkit",
-      description: "Comprehensive toolkit for cybersecurity incident response and forensics.",
-      tech: ["Go", "PostgreSQL", "Redis", "Kubernetes"],
+      title: "MCP Integration System",
+      description: "Model Context Protocol implementation for seamless AI agent communication and coordination.",
+      tech: ["TypeScript", "MCP", "WebSockets", "AI APIs"],
       status: "Development",
-      link: "/projects/incident-response"
+      link: "/projects/mcp-system"
     }
   ]
 
   const recentPosts = [
     {
-      title: "Advanced Persistent Threats in the AI Era",
-      excerpt: "Exploring how artificial intelligence is reshaping the cybersecurity landscape and threat modeling approaches.",
+      title: "Building planubo: Solo Founder's Full-Stack Journey",
+      excerpt: "From initial concept to production platform - the complete technical story of building planubo solo.",
       date: "2024-01-15",
-      readTime: "8 min read",
-      slug: "apt-ai-era"
-    },
-    {
-      title: "Building Secure AI Systems",
-      excerpt: "Best practices for implementing security-first AI applications in enterprise environments.",
-      date: "2024-01-10",
       readTime: "12 min read",
-      slug: "secure-ai-systems"
+      slug: "building-planubo-solo"
     },
     {
-      title: "Zero Trust Architecture Deep Dive",
-      excerpt: "A comprehensive guide to implementing zero trust security principles in modern cloud infrastructure.",
+      title: "Deep Dive into Multi-Agent Systems (MAS)",
+      excerpt: "Exploring the architecture and implementation of intelligent multi-agent systems with practical examples.",
+      date: "2024-01-10",
+      readTime: "10 min read",
+      slug: "multi-agent-systems"
+    },
+    {
+      title: "RAG + Knowledge Bases: The Future of AI",
+      excerpt: "How Retrieval-Augmented Generation and intelligent knowledge bases are revolutionizing AI applications.",
       date: "2024-01-05",
-      readTime: "15 min read",
-      slug: "zero-trust-deep-dive"
+      readTime: "8 min read",
+      slug: "rag-knowledge-bases"
     }
   ]
 
@@ -58,19 +58,19 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-8" style={{ backgroundColor: 'var(--theme-background)', borderColor: 'var(--theme-border)', color: 'var(--theme-primary-400)', border: '1px solid' }}>
               <Shield className="h-4 w-4 mr-2" />
-              Senior Software Engineer II @ CrowdStrike • Founder @ planubo.com
+              Senior Engineer II - Frontend @ CrowdStrike • Founder @ planubo.com
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="gradient-text glitch" data-text="DevChris">DevChris</span>
               <br />
-              <span className="text-white">Security Researcher</span>
+              <span className="text-white">Full-Stack Engineer</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Crafting secure software solutions and exploring the intersection of
-              <span className="font-semibold" style={{ color: 'var(--theme-primary-400)' }}> artificial intelligence</span> and
-              <span className="font-semibold" style={{ color: 'var(--theme-primary-400)' }}> cybersecurity</span>
+              Frontend engineer at CrowdStrike by day, solo founder by night. Built planubo entirely solo and now exploring the frontier of
+              <span className="font-semibold" style={{ color: 'var(--theme-primary-400)' }}> AI agents</span> and
+              <span className="font-semibold" style={{ color: 'var(--theme-primary-400)' }}> intelligent systems</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -98,10 +98,10 @@ export default function Home() {
           $ whoami
         </div>
         <div className="absolute top-40 right-10 terminal-font text-sm pointer-events-none" style={{ color: 'var(--theme-primary-400)', opacity: 0.3 }}>
-          ~/security/research
+          ~/planubo/ai-agents
         </div>
         <div className="absolute bottom-20 left-1/4 terminal-font text-sm pointer-events-none" style={{ color: 'var(--theme-primary-400)', opacity: 0.3 }}>
-          [INFO] System initialized
+          [INFO] Agent system online
         </div>
       </section>
 
@@ -115,44 +115,44 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="cyber-border rounded-xl p-8 hover:cyber-glow transition-all duration-300 group">
-                <Shield className="h-12 w-12 text-red-400 mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold mb-4 text-red-400">Cybersecurity</h3>
+                <Code className="h-12 w-12 mb-6 group-hover:scale-110 transition-transform" style={{ color: 'var(--theme-primary-400)' }} />
+                <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--theme-primary-400)' }}>Frontend Engineering</h3>
                 <p className="text-gray-300 mb-4">
-                  Advanced threat detection, incident response, and security architecture design.
+                  Senior frontend engineer at CrowdStrike building cybersecurity interfaces. Built planubo entirely solo as side project.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
-                  <li>• Threat Hunting & Analysis</li>
-                  <li>• Vulnerability Assessment</li>
-                  <li>• Security Architecture</li>
-                  <li>• Incident Response</li>
+                  <li>• React, Next.js, TypeScript at scale</li>
+                  <li>• Enterprise UI/UX for security tools</li>
+                  <li>• Full-stack solo projects (planubo)</li>
+                  <li>• Performance & accessibility expert</li>
                 </ul>
               </div>
 
               <div className="cyber-border rounded-xl p-8 hover:cyber-glow transition-all duration-300 group">
-                <Brain className="h-12 w-12 text-red-400 mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold mb-4 text-red-400">AI & Machine Learning</h3>
+                <Brain className="h-12 w-12 mb-6 group-hover:scale-110 transition-transform" style={{ color: 'var(--theme-primary-400)' }} />
+                <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--theme-primary-400)' }}>AI & Intelligent Systems</h3>
                 <p className="text-gray-300 mb-4">
-                  Developing AI-powered security solutions and exploring ML applications in cybersecurity.
+                  Deep-diving into AI agents, multi-agent systems, and next-generation intelligent applications.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
-                  <li>• ML-based Threat Detection</li>
-                  <li>• NLP for Security Analysis</li>
-                  <li>• AI Safety & Ethics</li>
-                  <li>• Large Language Models</li>
+                  <li>• Multi-Agent Systems (MAS)</li>
+                  <li>• RAG & Knowledge Bases</li>
+                  <li>• LangChain & AI Frameworks</li>
+                  <li>• Model Context Protocols (MCP)</li>
                 </ul>
               </div>
 
               <div className="cyber-border rounded-xl p-8 hover:cyber-glow transition-all duration-300 group">
-                <Code className="h-12 w-12 text-red-400 mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-bold mb-4 text-red-400">Software Engineering</h3>
+                <Terminal className="h-12 w-12 mb-6 group-hover:scale-110 transition-transform" style={{ color: 'var(--theme-primary-400)' }} />
+                <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--theme-primary-400)' }}>Product & Leadership</h3>
                 <p className="text-gray-300 mb-4">
-                  Building scalable, secure software systems with modern technologies and best practices.
+                  Founding and scaling planubo as a solo founder - from concept to production-ready platform.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
-                  <li>• Cloud Architecture (AWS/Azure)</li>
-                  <li>• Microservices & APIs</li>
-                  <li>• DevSecOps & CI/CD</li>
-                  <li>• Full-Stack Development</li>
+                  <li>• Product Strategy & Vision</li>
+                  <li>• Technical Architecture</li>
+                  <li>• Performance Optimization</li>
+                  <li>• Solo Founder Experience</li>
                 </ul>
               </div>
             </div>
@@ -170,7 +170,8 @@ export default function Home() {
               </h2>
               <Link
                 href="/projects"
-                className="flex items-center text-red-400 hover:text-red-300 transition-colors group"
+                className="flex items-center transition-colors group theme-hover"
+                style={{ color: 'var(--theme-primary-400)' }}
               >
                 View All Projects
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -192,10 +193,10 @@ export default function Home() {
                       }`}>
                       {project.status}
                     </span>
-                    <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-red-400 transition-colors" />
+                    <ExternalLink className="h-4 w-4 text-gray-400 transition-colors theme-hover" />
                   </div>
 
-                  <h3 className="text-xl font-bold mb-3 text-red-400 group-hover:text-red-300 transition-colors">
+                  <h3 className="text-xl font-bold mb-3 transition-colors theme-hover" style={{ color: 'var(--theme-primary-400)' }}>
                     {project.title}
                   </h3>
 
@@ -216,7 +217,8 @@ export default function Home() {
 
                   <Link
                     href={project.link}
-                    className="text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
+                    className="text-sm font-medium transition-colors theme-hover"
+                    style={{ color: 'var(--theme-primary-400)' }}
                   >
                     Learn More →
                   </Link>
@@ -237,7 +239,8 @@ export default function Home() {
               </h2>
               <Link
                 href="/blog"
-                className="flex items-center text-red-400 hover:text-red-300 transition-colors group"
+                className="flex items-center transition-colors group theme-hover"
+                style={{ color: 'var(--theme-primary-400)' }}
               >
                 View All Posts
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -256,7 +259,7 @@ export default function Home() {
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold mb-3 text-red-400 group-hover:text-red-300 transition-colors">
+                  <h3 className="text-xl font-bold mb-3 transition-colors theme-hover" style={{ color: 'var(--theme-primary-400)' }}>
                     {post.title}
                   </h3>
 
@@ -266,7 +269,8 @@ export default function Home() {
 
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
+                    className="text-sm font-medium transition-colors theme-hover"
+                    style={{ color: 'var(--theme-primary-400)' }}
                   >
                     Read More →
                   </Link>

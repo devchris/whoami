@@ -18,11 +18,10 @@ export default function BlogPage() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-                            Security Research & Insights
+                            Blog & Insights
                         </h1>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                            Exploring the latest in cybersecurity, artificial intelligence, and software engineering.
-                            Sharing knowledge from the frontlines of enterprise security.
+                            Thoughts on frontend engineering, AI systems, cybersecurity, and building planubo as a solo founder.
                         </p>
                     </div>
 
@@ -35,10 +34,18 @@ export default function BlogPage() {
                                     <input
                                         type="text"
                                         placeholder="Search articles..."
-                                        className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                                        className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1"
+                                        style={{ 
+                                            '--tw-ring-color': 'var(--theme-primary-400)',
+                                            borderColor: 'var(--theme-border)'
+                                        } as React.CSSProperties}
                                     />
                                 </div>
-                                <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 min-w-[160px]">
+                                <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:ring-1 min-w-[160px]"
+                                    style={{ 
+                                        '--tw-ring-color': 'var(--theme-primary-400)',
+                                        borderColor: 'var(--theme-border)'
+                                    } as React.CSSProperties}>
                                     <option value="">All Categories</option>
                                     {tags.map((tag) => (
                                         <option key={tag} value={tag}>{tag}</option>
@@ -54,7 +61,11 @@ export default function BlogPage() {
                                 <Link
                                     key={tag}
                                     href={`/blog/tag/${tag.toLowerCase()}`}
-                                    className="flex items-center px-3 py-1 rounded-full bg-gray-800 hover:bg-cyan-500/20 text-gray-300 hover:text-cyan-400 text-sm transition-all duration-200 border border-gray-700 hover:border-cyan-500/50"
+                                    className="flex items-center px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm transition-all duration-200 border border-gray-700 theme-hover"
+                                    style={{
+                                        '--hover-bg': 'var(--theme-background)',
+                                        '--hover-border': 'var(--theme-border-hover)'
+                                    } as React.CSSProperties}
                                 >
                                     <Tag className="h-3 w-3 mr-1" />
                                     {tag}
@@ -89,7 +100,11 @@ export default function BlogPage() {
                                 >
                                     {post.featured && (
                                         <div className="flex items-center mb-4">
-                                            <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-medium">
+                                            <span className="px-3 py-1 rounded-full text-xs font-medium"
+                                                style={{ 
+                                                    backgroundColor: 'var(--theme-background)', 
+                                                    color: 'var(--theme-primary-400)' 
+                                                }}>
                                                 Featured
                                             </span>
                                         </div>
@@ -103,8 +118,10 @@ export default function BlogPage() {
                                         <span>{post.readTime}</span>
                                     </div>
 
-                                    <h2 className="text-xl font-bold mb-3 text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                                        <Link href={`/blog/${post.slug}`}>
+                                    <h2 className="text-xl font-bold mb-3 transition-colors">
+                                        <Link href={`/blog/${post.slug}`} 
+                                            className="theme-hover"
+                                            style={{ color: 'var(--theme-primary-400)' }}>
                                             {post.title}
                                         </Link>
                                     </h2>
@@ -131,7 +148,8 @@ export default function BlogPage() {
 
                                     <Link
                                         href={`/blog/${post.slug}`}
-                                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
+                                        className="text-sm font-medium transition-colors theme-hover"
+                                        style={{ color: 'var(--theme-primary-400)' }}
                                     >
                                         Read Article →
                                     </Link>
@@ -153,9 +171,13 @@ export default function BlogPage() {
                                 <input
                                     type="email"
                                     placeholder="your.email@example.com"
-                                    className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                                    className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-1"
+                                    style={{ 
+                                        '--tw-ring-color': 'var(--theme-primary-400)',
+                                        borderColor: 'var(--theme-border)'
+                                    } as React.CSSProperties}
                                 />
-                                <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-gray-900 rounded-lg font-semibold transition-all duration-200 cyber-glow">
+                                <button className="px-6 py-3 text-gray-900 rounded-lg font-semibold transition-all duration-200 cyber-glow theme-button-primary">
                                     Subscribe
                                 </button>
                             </div>

@@ -12,23 +12,23 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://devchris.net'),
-  title: 'DevChris.net - Senior Software Engineer & Security Researcher',
-  description: 'Personal website of Chris, Senior Software Engineer II at CrowdStrike and Founder of planubo.com. Sharing insights on AI, security research, and software engineering.',
-  keywords: ['software engineer', 'security researcher', 'CrowdStrike', 'planubo', 'founder', 'AI', 'cybersecurity', 'blog'],
+  title: 'DevChris.net - Senior Frontend Engineer & AI Pioneer',
+  description: 'Personal website of Chris, Senior Engineer II - Frontend at CrowdStrike and Founder of planubo.com. Built planubo solo and exploring AI agents, MAS, RAG, and intelligent systems.',
+  keywords: ['frontend engineer', 'CrowdStrike', 'cybersecurity', 'planubo', 'founder', 'AI agents', 'MAS', 'RAG', 'LangChain', 'MCP', 'blog'],
   authors: [{ name: 'Chris', url: 'https://devchris.net' }],
   creator: 'Chris',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://devchris.net',
-    title: 'DevChris.net - Senior Software Engineer & Security Researcher',
-    description: 'Personal website of Chris, Senior Software Engineer II at CrowdStrike and Founder of planubo.com. Sharing insights on AI, security research, and software engineering.',
+    title: 'DevChris.net - Senior Frontend Engineer & AI Pioneer',
+    description: 'Personal website of Chris, Senior Engineer II - Frontend at CrowdStrike and Founder of planubo.com. Built planubo solo and exploring AI agents, MAS, RAG, and intelligent systems.',
     siteName: 'DevChris.net',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DevChris.net - Senior Software Engineer & Security Researcher',
-    description: 'Personal website of Chris, Senior Software Engineer II at CrowdStrike and Founder of planubo.com. Sharing insights on AI, security research, and software engineering.',
+    title: 'DevChris.net - Senior Frontend Engineer & AI Pioneer',
+    description: 'Personal website of Chris, Senior Engineer II - Frontend at CrowdStrike and Founder of planubo.com. Built planubo solo and exploring AI agents, MAS, RAG, and intelligent systems.',
   },
   robots: {
     index: true,
